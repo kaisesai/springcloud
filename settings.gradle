@@ -1,4 +1,12 @@
 include 'eureka-server'
 include 'config-server'
 include 'api-gateway-dynamic-route'
+include 'hello-service'
+include 'hello-service-api'
+include 'feign-consumer'
+include 'config-client'
+include 'ribbon-consumer'
+include 'hystrix-dashboard'
+include 'turbine'
+include 'api-gateway'
 

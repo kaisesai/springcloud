@@ -1,0 +1,53 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'java'
+    id 'maven-publish'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+// 当使用了
+jar {
+    enabled = true
+}
+
+bootJar {
+    enabled = false
+}
+
+// 问题使用 gradle publishLocal命令,需要
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId group
+            artifactId 'hello-service-api'
+            version version
+
+            from components.java
+            // more goes in here
+        }
+    }
+
+    repositories {
+        mavenLocal()
+    }
+}
+
+
+group = 'com.look'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+    implementation('org.projectlombok:lombok:1.18.2')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+
+

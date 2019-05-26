@@ -3,4 +3,5 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'eureka-server'
+rootProject.name = 'hello-service-api'
+
