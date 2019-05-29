@@ -10,4 +10,5 @@ include 'ribbon-consumer'
 include 'hystrix-dashboard'
 include 'turbine'
 include 'api-gateway'
+include 'rabbitmq-hello'
 
