@@ -1,21 +1,18 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.5.RELEASE'
-    id 'java'
     id 'maven-publish'
 }
 
-apply plugin: 'io.spring.dependency-management'
-
-// 当使用了
+// 重写 jar 插件
 jar {
     enabled = true
 }
 
+// 重写 bootJar 插件
 bootJar {
     enabled = false
 }
 
-// 问题使用 gradle publishLocal命令,需要
+// 重写 publishing 插件
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -31,22 +28,6 @@ publishing {
     repositories {
         mavenLocal()
     }
-}
-
-
-group = 'com.look'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-    mavenLocal()
-    mavenCentral()
-    maven { url "https://repo.spring.io/milestone" }
-}
-
-dependencies {
-    implementation('org.projectlombok:lombok:1.18.2')
-    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
 

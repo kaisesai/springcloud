@@ -1,29 +1,49 @@
-//    plugins {
-//        id 'org.springframework.boot' version '2.1.5.RELEASE' apply false
-//        id 'java'
-//    }
+plugins {
+    // 指定插件 不应用在此项目 apply false
+    id "org.springframework.boot" version "2.1.5.RELEASE" apply false
+}
 
-//subprojects {
-//
-//
-//    apply plugin: 'io.spring.dependency-management'
-//
-//    ext {
-//        set('springCloudVersion', "Greenwich.SR1")
-//    }
-//
-//    repositories {
-//        mavenCentral()
-//        maven { url "http://repo.spring.io/release" }
-//        maven { url 'https://repo.spring.io/libs-milestone' }
-//        maven { url "http://repo.spring.io/milestone" }
-//        maven { url "http://repo.spring.io/snapshot" }
-//    }
-//
-//    dependencyManagement {
-//        imports {
-//            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
-//        }
-//    }
-//
-//}
+// 配置所有的子项目信息
+subprojects {
+    // 应用插件
+//    apply plugin: 'idea'
+    apply plugin: 'java'
+    apply plugin: "org.springframework.boot"
+    apply plugin: 'io.spring.dependency-management'
+
+    // 指定JDK版本
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    version '1.0-SNAPSHOT'
+    group 'com.look'
+
+    ext {
+        set('springBootVersion', "2.1.5.RELEASE")
+        set('springCloudVersion', "Greenwich.SR1")
+    }
+
+    configurations {
+        compileOnly {
+            extendsFrom annotationProcessor
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://repo.spring.io/milestone" }
+    }
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        }
+    }
+
+}
