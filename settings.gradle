@@ -11,4 +11,8 @@ include 'hystrix-dashboard'
 include 'turbine'
 include 'api-gateway'
 include 'rabbitmq-hello'
+include 'stream-hello'
+include 'trace-1'
+include 'trace-2'
+include 'zipkin-server'
 

@@ -14,7 +14,11 @@ public class TestController {
 
   @RequestMapping(value = "/from")
   public String from() {
+
+    String s = new String();
+
     return from;
+
   }
 
 }
