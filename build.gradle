@@ -19,7 +19,7 @@ subprojects {
     group 'com.look'
 
     ext {
-        set('springBootVersion', "2.1.5.RELEASE")
+//        set('springBootVersion', "2.1.5.RELEASE")
         set('springCloudVersion', "Greenwich.SR1")
     }
 

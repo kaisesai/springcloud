@@ -1,4 +1,4 @@
-package com.look.controller;
+package com.look.helloservice.controller;
 
 import com.google.common.collect.Lists;
 import com.look.api.dto.User;

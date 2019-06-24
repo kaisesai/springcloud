@@ -4,9 +4,12 @@ dependencies {
 //    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
 //    implementation "org.springframework.amqp:spring-rabbit"
 
+    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
     implementation 'io.zipkin.java:zipkin-server:2.11.8'
     implementation 'io.zipkin.java:zipkin-autoconfigure-ui:2.11.8'
     implementation 'io.zipkin.java:zipkin-autoconfigure-collector-rabbitmq:2.11.8'
+//    implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin-stream'
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit'
     implementation 'io.zipkin.java:zipkin-autoconfigure-storage-elasticsearch-http:2.8.4'
 
 
