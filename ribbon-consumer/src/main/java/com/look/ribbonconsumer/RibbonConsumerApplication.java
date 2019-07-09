@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @ServletComponentScan
 @SpringCloudApplication
-@SpringBootApplication(scanBasePackages = "com.look.ribbonconsumer")
+// @SpringBootApplication(scanBasePackages = "com.look.ribbonconsumer")
 public class RibbonConsumerApplication {
 
   @LoadBalanced

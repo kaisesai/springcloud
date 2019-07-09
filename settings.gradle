@@ -20,3 +20,5 @@ include 'stream-hello'
 include 'trace-1'
 include 'trace-2'
 include 'zipkin-server'
+include 'stream-producer'
+

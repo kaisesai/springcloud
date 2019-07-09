@@ -31,8 +31,8 @@ public class ConsumerController {
   public User getUserById(@PathVariable(value = "id") Long id) throws ExecutionException, InterruptedException {
     // User user = null;
     // for (int i = 0; i < 10; i++) {
-      // System.out.println("[开始执行第 " + i + " 次方法]");
-      // user = userService.getUserById(id);
+    //   System.out.println("[开始执行第 " + i + " 次方法]");
+    //   user = userService.getUserById(id);
     // }
     User user = userService.getUserById(id);
     return user;

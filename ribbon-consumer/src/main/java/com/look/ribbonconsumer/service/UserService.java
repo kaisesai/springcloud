@@ -25,7 +25,6 @@ public class UserService {
   @HystrixCommand
   public List<User> findAll(List<Long> ids) {
     System.out.println("[开始执行方法]\t[findAll]");
-    // List forObject = restTemplate.getForObject("http://HELLO-SERVICE/users?ids={1}", List.class, StringUtils.join(ids, ','));
     ParameterizedTypeReference<List<User>> responseType = new ParameterizedTypeReference<List<User>>() {
     };
     String idStr = StringUtils.join(ids, ",");
