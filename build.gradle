@@ -37,7 +37,7 @@ subprojects {
     }
 
     dependencies {
-//        compileOnly 'org.projectlombok:lombok'
+        compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         // 配置 log4j2 日志
         implementation 'org.springframework.boot:spring-boot-starter-log4j2'
