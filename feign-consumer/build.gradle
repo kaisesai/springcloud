@@ -1,5 +1,5 @@
 dependencies {
-    implementation 'com.look:hello-service-api:0.0.1-SNAPSHOT'
+    implementation 'com.look:hello-service-api:1.0-SNAPSHOT'
     implementation('org.springframework.boot:spring-boot-starter-actuator')
     implementation 'org.springframework.boot:spring-boot-starter-web'
 //    implementation 'org.springframework.cloud:spring-cloud-starter'
